@@ -31,60 +31,35 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" style="padding-bottom: 4rem;">
+    <section class="hero" style="padding-bottom: 1rem;">
         <div class="container">
             <h1>Getting Started</h1>
             <p>A quick guide to setting up and using the Openfarm system.</p>
         </div>
     </section>
 
-    <!-- Tutorial Timeline -->
-    <div class="container section">
-        <div class="timeline">
+    <div class="container section" style="text-align: center;">
+        <button id="show-btn" class="btn btn-primary">Show Guide</button>
 
-            <!-- Step 1 -->
-            <div class="step left">
-                <div class="step-content">
-                    <h3 class="mb-2">1. First Thing</h3>
-                    <p class="mb-2">Stuff.</p>
-                    <img src="https://via.placeholder.com/400x250/"
-                        alt="temp" style="margin-top: 1rem;">
-                </div>
-            </div>
-
-            <!-- Step 2 -->
-            <div class="step right">
-                <div class="step-content">
-                    <h3 class="mb-2">2. Second Thing</h3>
-                    <p class="mb-2">More stuff.<a
-                            href="download.html" style="color: var(--primary); text-decoration: underline;">Download
-                            page</a>. Follow the installation prompts.</p>
-                    <img src="https://via.placeholder.com/400x250/"
-                        alt="temp" style="margin-top: 1rem;">
-                </div>
-            </div>
-
-            <!-- Step 3 -->
-            <div class="step left">
-                <div class="step-content">
-                    <h3 class="mb-2">3. Third Thing</h3>
-                    <p class="mb-2">Maybe stuff?</p>
-                    <img src="https://via.placeholder.com/400x250/" alt="temp"
-                        style="margin-top: 1rem;">
-                </div>
-            </div>
-
-            <!-- Step 4 -->
-            <div class="step right">
-                <div class="step-content">
-                    <h3 class="mb-2">4. Fourth Thing</h3>
-                    <p class="mb-2">Definitely stuff.</p>
-                    <img src="https://via.placeholder.com/400x250/"
-                        alt="temp" style="margin-top: 1rem;">
-                </div>
-            </div>
+        <div id="pdf-wrapper" class="hidden">
+            
+            <object data="staticdocs/tutorialPdf.pdf" type="application/pdf" width="100%" height="600px">
+                <p>PDF cannot be displayed.</p>
+            </object>
 
         </div>
+
+        <script>
+            const btn = document.getElementById('show-btn');
+            const wrapper = document.getElementById('pdf-wrapper');
+
+            btn.addEventListener('click', () => {
+                wrapper.classList.toggle('hidden');
+
+                const isHidden = wrapper.classList.contains('hidden');
+                btn.textContent = isHidden ? 'Show Guide' : 'Hide Guide';
+            });
+        </script>
     </div>
 
     <!-- Footer -->

@@ -17,6 +17,11 @@
     --transition: all 0.3s ease;
 }
 
+/* for tutorial show-button */
+.hidden {
+    display: none;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -101,12 +106,6 @@ img {
     justify-content: space-between;
     align-items: center;
 }
-
-/* .inline-row-grouper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-} */
 
 .logo {
     font-size: 1.5rem;
